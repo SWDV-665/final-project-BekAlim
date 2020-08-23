@@ -1,0 +1,7 @@
+{
+  "name": "IveBinDer",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

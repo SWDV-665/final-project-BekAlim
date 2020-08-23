@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edit: {{modalTitle}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-grid>
+
+    <ion-item>
+      <ion-label position="floating">Enter Title</ion-label>
+      <ion-input value="testvalue" required [(ngModel)]="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Enter Country</ion-label>
+      <ion-input required [(ngModel)]="country"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Enter City</ion-label>
+      <ion-input required [(ngModel)]="city"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>MM DD YY</ion-label>
+      <ion-datetime displayFormat="MM DD YY" max="2050-30-12" placeholder="Select Start Date"  [(ngModel)]="startDate"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>MM DD YY</ion-label>
+      <ion-datetime displayFormat="MM DD YY" max="2050-30-12" placeholder="Select End Date" [(ngModel)]="endDate"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Trip Notes</ion-label>
+      <ion-textarea [(ngModel)]="notes"></ion-textarea>
+    </ion-item>
+
+    <div class="ion-padding">
+      <ion-button expand="block" type="submit" class="ion-no-margin" (click)="editTrip()">Save changes</ion-button>
+    </div>
+
+    <div class="ion-padding">
+      <ion-button expand="block" class="ion-no-margin" (click)="closeModal()">Cancel</ion-button>
+    </div>
+
+  </ion-grid>
+
+</ion-content>

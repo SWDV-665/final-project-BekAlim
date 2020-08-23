@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{modalTitle}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-list>
+    <ion-item>
+      <ion-label>City : {{data.city}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Country : {{data.country}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Start Date : {{data.startDate | date: 'yyyy-MM-dd'}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>End Date : {{data.endDate | date: 'yyyy-MM-dd'}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Notes : {{data.notes}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-row>
+    <ion-col text-center>
+      <ion-button (click)="presentAlertConfirm(modalTitle)" color="danger">Remove</ion-button>
+    </ion-col>
+    <ion-col text-center>
+      <ion-button (click)="closeModal()">Close Details</ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
